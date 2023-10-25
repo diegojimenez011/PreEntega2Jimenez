@@ -55,8 +55,7 @@ footer{
 }
 
 #carr{ /*imagenes de los clientes*/
-    width: 150px;
-    height: 100px;
+    width: 45%;
     border-radius: 4rem;
 }
 
@@ -74,14 +73,19 @@ footer{
     margin:1.5%;
     border-radius:11rem;
 }
-.art{
+.art, .contacto {  /*-------------configuracion de los articulos------------------*/
     margin:5%;
     background-color: bisque;
-    border-radius: 10rem;
-    padding: 4%;
+    border-radius: 8rem;
+    padding: 7%;
     text-align: center;
     overflow: hidden;
+    display: block;
+    text-align: center;
 }
+
+
+
 .text{
     display: flex;
     text-align: center;
@@ -90,25 +94,14 @@ footer{
 }
 
 
-.exp{
-    margin:5%;
-    display: flex;
-    flex-direction: row;
-    background-color: hsl(235, 76%, 83%);
-    border-radius: 10rem;
-    padding: 4%;
-    text-align: center;
-    justify-content: center;
+/*--------------------Texto del area de contacto-------------------*/
+textarea {
+    resize: vertical;
+    width: 66%;
 }
 
-.contacto{
-    border-radius: 7rem;
-    background-color: bisque;
-    padding: 2%;
-    margin:5%;
-    display: block;
-    text-align: center;
-}
+
+
 iframe{ /*propiedades de los mapas*/
     border-radius: 2rem;
 }
@@ -118,8 +111,9 @@ aside{
     flex-direction: column;
     margin:1%;
 }
-.ass{
-    
+.ass{/*contenedor aside*/
+    padding-top:12.5%;
+    padding-right:4%;
     border-radius: 3rem;
 }.ass1{
     display: flex;
@@ -130,34 +124,13 @@ aside{
     font-size: small;
 }
 
-/* parallax */
 
-.parallax {
-	/* Imagen de fondo elegida */
-	background-image: url("../assets/img/header2.jpg");
-	
-	/* Definir un alto específico */
-	height: 100vh;
-	width: auto;
-
-	/* Crear el efecto parallax al scrollear */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	/* box modeling */
-	padding: 50px 30px;
-	margin-bottom: 50px;
-    padding: 2%;
-
-}
 
 /* caruserl */
 
 /*---------------------------redes sociales------------------------*/
 .buttons {
-	min-width: 700px;
+	min-width: auto;
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -203,7 +176,10 @@ aside{
 
 
 
-#grid-container{
+/*------------------------------grid general aplicado al body----------------------------*/
+
+
+#grid-container{ 
     display: grid;
     grid-template-areas: 
         "header"
@@ -221,30 +197,121 @@ aside{
 .footer{
     grid-area: footer;
 }
+    /*------------------grids aplicado al main--------------*/
+    .grid{ 
+        display: grid;
+        grid-template-areas: 
+            "parallax"
+            "section"
+            "aside";
+        grid-template-rows: auto auto auto;
+    }
+    .parallax{
+        grid-area: parallax;
+    }
+    .section{
+        grid-area: section;
+    }
+    .aside{
+        grid-area: aside;
+    }
 
-.grid{
-    display: grid;
-    grid-template-areas: 
-        "parallax parallax parallax"
-        "none section aside"
-        "none section aside";
-    grid-template-columns: 0.5fr 5fr 1fr;
-    grid-template-rows: auto auto auto;
-    column-gap: 5%;
+/* parallax */
+
+.parallax {
+	/* Imagen de fondo elegida */
+	background-image: url("../assets/img/header2-1.jpg");
+	
+	/* Definir un alto específico */
+	height: 100vh;
+	width: auto;
+
+	/* Crear el efecto parallax al scrollear */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* box modeling */
+	padding: 50px 30px;
+	margin-bottom: 50px;
+    padding: 2%;
+
 }
-.parallax{
-    grid-area: parallax;
+
+
+.exp{   /*--------------configuracion del carrusel-----------------*/
+    margin:5%;
+    background-color: hsl(235, 76%, 83%);
+    border-radius: 7rem;
+    padding: 8%;
+    text-align: center;
+    justify-content: center;
+    overflow:inherit;
 }
-.section{
-    grid-area: section;
+
+
+@media screen and (min-width:768px){
+
+    /*------------------grids aplicado al main--------------*/
+    .grid{ 
+        display: grid;
+        grid-template-areas: 
+            "parallax parallax parallax"
+            "none section aside"
+            "none section aside";
+        grid-template-columns: 1fr 5fr 1.5fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 2.5%;
+    }
+    .parallax{
+        grid-area: parallax;
+    }
+    .section{
+        grid-area: section;
+    }
+    .aside{
+        grid-area: aside;
+    }
+
+
+
+
+    .exp{   /*--------------configuracion del carrusel-----------------*/
+        margin:5%;
+        display: flex;
+        flex-direction: row;
+        background-color: hsl(235, 76%, 83%);
+        border-radius: 7rem;
+        padding: 8%;
+        text-align: center;
+        justify-content: center;
+        overflow:inherit;
+    }
 }
-.aside{
-    grid-area: aside;
-}
-@media (max-width:600px){ /*mobile-first & tablets*/
-    .grid{
-    
-        grid-template-columns: 1fr;
+
+@media screen and (min-width:600px){ /*mobile-first & tablets*/
+    /* parallax */
+
+    .parallax {
+        /* Imagen de fondo elegida */
+        background-image: url("../assets/img/header2.jpg");
+        
+        /* Definir un alto específico */
+        height: 100vh;
+        width: auto;
+
+        /* Crear el efecto parallax al scrollear */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* box modeling */
+        padding: 50px 30px;
+        margin-bottom: 50px;
+        padding: 2%;
+
     }
     
 }
