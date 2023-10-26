@@ -418,21 +418,21 @@ aside{
   }
   
 /*----------------------------------------------PARALLAX-------------------------------------*/
-  .parallax {
+.parallax {
 
-    height: 100vh;
-    width: auto;
+height: 100vh;
+width: auto;
 
-    /* Crear el efecto parallax al scrollear */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Crear el efecto parallax al scrollear */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 
-    /* box modeling */
-    padding: 50px 30px;
-    margin-bottom: 50px;
-    padding: 2%;
+/* box modeling */
+padding: 50px 30px;
+margin-bottom: 50px;
+padding: 2%;
 
 }
 /*----------------------------FIN____PARALLAX--------------------------------------------*/
@@ -440,27 +440,27 @@ aside{
 /*--------------------------------------------------------------MEDIA QUERIS------------------------------------------------------------------*/
 
 
-@media screen and (max-width:300px) {
+@media only screen and (max-width:300px) {
     .parallax{
         height: 250vh;
         width: auto;
     }
 }
-@media screen and (max-width:480px) {
+@media only screen and (max-width:480px) {
     .parallax{
         height: 200vh;
         width: auto;
     }
     
 }
-@media screen and (max-width:576px) {
+@media only screen and (max-width:576px) {
     .parallax{
         height: 150vh;
         width: auto;
     }
 }
 
-@media screen and (max-width:768px){ 
+@media only screen and (max-width:768px){ 
 
     /* Imagen de fondo elegida */
     #p1{    
@@ -486,7 +486,7 @@ aside{
 }
 
 
-@media screen and (min-width:768px){
+@media only screen and (min-width:768px){
 
     /*------------------grids aplicado al main--------------*/
     .grid{ 
