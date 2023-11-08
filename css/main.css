@@ -1,3 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+/*estilos de hader*/
+body {
+  font-family: "Josefin Sans";
+  background-color: beige;
+}
+body header .parallax {
+  height: 100vh;
+  width: auto;
+  /* Crear el efecto parallax al scrollear */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* box modeling */
+  padding: 50px 30px;
+  margin-bottom: 50px;
+  padding: 2%;
+}
+body header .parallax #cabecera {
+  background-color: rgb(213, 255, 134) !important;
+  padding: 1%;
+  position: sticky;
+  top: 20px;
+  border-radius: 2rem;
+  margin: 20px;
+}
+body header .parallax #cabecera .container-fluid {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+body main div .section h1 {
+  text-align: center;
+}
+body main div .section h2 {
+  font-family: "Brush Script MT";
+  font-size: xx-large;
+  text-align: center;
+}
+body main div .section .art {
+  margin: 5%;
+  background-color: bisque;
+  border-radius: 8rem;
+  padding: 7%;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+body main div .section .art h3 {
+  font-family: "Brush Script MT";
+  font-size: xx-large;
+  text-align: center;
+}
+body main div .section .art .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+body main div .section .art .container div .image {
+  width: 85%;
+  margin: 1.5%;
+  border-radius: 11rem;
+}
+body main div .section .art .container .text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+body main div .section div .carousel-inner div .exp {
+  margin: 5%;
+  background-color: hsl(235, 76%, 83%);
+  border-radius: 7rem;
+  padding: 8%;
+  text-align: center;
+  justify-content: center;
+  overflow: inherit;
+}
+body main div .section div .carousel-inner div .exp #carr {
+  width: 45%;
+  border-radius: 4rem;
+}
+body main div aside {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+body main div aside .ass {
+  padding-top: 12.5%;
+  padding-right: 4%;
+  border-radius: 3rem;
+}
+body main div aside .ass .ass1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main div aside .ass .ass1 li #lat-bar {
+  font-size: small;
+}
+body main .presentacion {
+  text-align: center;
+  padding: 5%;
+}
+body main .contacto {
+  margin: 5%;
+  background-color: bisque;
+  border-radius: 8rem;
+  padding: 7%;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+body main section .art .container div iframe {
+  border-radius: 2rem;
+}
+body main .contacto textarea {
+  resize: vertical;
+  width: 66%;
+}
+body main .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+body main .wrapper .cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+body main .wrapper .cols .col {
+  width: 100%;
+  margin: 1rem;
+  cursor: pointer;
+}
+body main .wrapper .cols .col .container {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+body main .wrapper .cols .col .container:hover .front {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body main .wrapper .cols .col .container:hover .back {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body main .wrapper .cols .col .container .front {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body main .wrapper .cols .col .container .front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 0.6;
+  background-color: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+body main .wrapper .cols .col .container .front .inner {
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  justify-content: center;
+}
+body main .wrapper .cols .col .container .front .inner p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+body main .wrapper .cols .col .container .front .inner p:after {
+  content: "";
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.75rem;
+}
+body main .wrapper .cols .col .container .front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+body main .wrapper .cols .col .container .back {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body main .wrapper .cols .col .container .back .inner {
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  justify-content: center;
+}
+body footer {
+  padding: 2%;
+  display: block;
+  text-align: center;
+}
+body footer .buttons {
+  min-width: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer .buttons a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+body footer .buttons a:hover {
+  transform: scale(1.2);
+}
+body footer .fot {
+  display: flex;
+  justify-content: center;
+}
+body footer .fot .arriba {
+  margin-top: 7%;
+  width: 80px;
+  height: 70px;
+  margin-bottom: 3%;
+  color: #f1f1f1;
+  background-color: #314652;
+  border-radius: 23px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  align-items: center;
+}
 
 /*# sourceMappingURL=main.css.map */
