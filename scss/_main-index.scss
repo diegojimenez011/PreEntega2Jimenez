@@ -8,11 +8,14 @@
             "section"
             "section"
             "aside";
+            
         grid-template-rows: auto auto auto;
+
+
 
         //estilos del index---pagina principal//
 
-            .section{
+            .section{ 
                 grid-area: section;
 
                 h1{

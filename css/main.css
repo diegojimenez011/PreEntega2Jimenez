@@ -502,13 +502,10 @@ body #grid-container .footer .fot .arriba {
   }
   body #grid-container .grid {
     display: grid;
-    grid-template-areas: "parallax parallax parallax" "none section aside" "none section aside";
+    grid-template-areas: "none section aside" "none section aside" "none section aside";
     grid-template-columns: 1fr 5fr 1.5fr;
     grid-template-rows: auto auto auto;
     column-gap: 2.5%;
-  }
-  body #grid-container .parallax {
-    grid-area: parallax;
   }
   body #grid-container .section {
     grid-area: section;
