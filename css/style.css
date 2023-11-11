@@ -13,6 +13,8 @@ color: #444;
 text-align: center;
 margin: 2rem 0;
 }*/
+
+/*
 @font-face {
 	font-family: 'AnotherDay';
 	src: url('../assets/font/AnotherDay.ttf');
@@ -22,18 +24,30 @@ margin: 2rem 0;
 	font-family: 'Amstagram';
 	src: url('../assets/font/Amstagram.ttf');
 }
+*/
 
 /*body{
     font-family: 'Josefin Sans';
     background-color:beige;
 }*/
-
+/*
 a{
 	color: black;
 	font-weight: 600;
 	text-decoration: none;
 	line-height: 2rem;
-}/*
+}
+li{
+	text-align: center; /centrado de texto/
+	margin-left: 2%;
+	display: inline-block;
+	width: auto;
+	position: relative;
+	font-size: 2rem;
+}
+*/
+
+/*
 h1{
     text-align: center;
 }
@@ -45,14 +59,7 @@ h2, h3{
     text-align: center;
 }
 */
-li{
-	text-align: center; /*centrado de texto*/
-	margin-left: 2%;
-	display: inline-block;
-	width: auto;
-	position: relative;
-	font-size: 2rem;
-}
+
 
 
 
@@ -424,7 +431,7 @@ li{
 /*------------------------------grid general aplicado al body----------------------------*/
 
 
-#grid-container{ 
+/*#grid-container{ 
     display: grid;
     grid-template-areas: 
         "header"
@@ -441,18 +448,22 @@ li{
 }
 .footer{
     grid-area: footer;
-}
+}*/
+
+
+
     /*------------------grids aplicado al main--------------*/
+    /*
     .grid{ 
         display: grid;
         grid-template-areas: 
-            "parallax"
+            "section"
             "section"
             "aside";
         grid-template-rows: auto auto auto;
     }
     .parallax{
-        grid-area: parallax;
+        grid-area: section;
     }
     .section{
         grid-area: section;
@@ -460,13 +471,13 @@ li{
     .aside{
         grid-area: aside;
     }
-
+*/
 
 
 
 /*--------------------------------------------------------------MEDIA QUERIS------------------------------------------------------------------*/
 
-
+/*
 @media only screen and (max-width:300px) {
     .parallax{
         height: 250vh;
@@ -489,7 +500,7 @@ li{
 
 @media only screen and (max-width:768px){ 
 
-    /* Imagen de fondo elegida */
+    /Imagen de fondo elegida /
     #p1{    
     background-image: url("../assets/img/header2-1.jpg");
     }
@@ -515,7 +526,7 @@ li{
 
 @media only screen and (min-width:768px){
 
-    /*------------------grids aplicado al main--------------*/
+    /------------------grids aplicado al main--------------/
     .grid{ 
         display: grid;
         grid-template-areas: 
@@ -536,7 +547,7 @@ li{
         grid-area: aside;
     }
 
-    .exp{   /*--------------configuracion del carrusel-----------------*/
+    .exp{   /--------------configuracion del carrusel-----------------/
         margin:5%;
         display: flex;
         flex-direction: row;
@@ -549,7 +560,7 @@ li{
     }
     
     
-    /* Imagen de fondo elegida */
+    /Imagen de fondo elegida /
     #p1{
         background-image: url("../assets/img/header2.jpg");
     }
@@ -573,3 +584,4 @@ li{
         align-items: center;
     }
 }
+*/

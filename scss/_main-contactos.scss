@@ -1,0 +1,29 @@
+.main{
+    grid-area: main;
+    
+    .section{
+        grid-area: section;
+
+        //estilo de la pagina de contactos//
+        .contacto{
+            margin:5%;
+            background-color: bisque;
+            border-radius: 8rem;
+            padding: 7%;
+            text-align: center;
+            overflow: hidden;
+            display: block;
+            text-align: center;
+                
+            textarea{
+                resize: vertical;
+                width: 66%;
+            }
+        }
+    }
+
+    .aside{
+        grid-area: aside;
+    }
+
+}

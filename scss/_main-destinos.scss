@@ -1,0 +1,55 @@
+.main{
+
+    grid-area: main;
+
+    display: flex; 
+    justify-content: center; 
+    flex-direction:inherit;
+
+    //estilo de la pagina de los destinos//
+    .section{
+        grid-area: section;
+        display: inline-flexbox;
+        justify-content: center;
+
+        h2{
+            font-size: 50px;
+        }
+        .art{
+
+            margin:5%;
+            background-color: bisque;
+            border-radius: 8rem;
+            padding: 7%;
+            text-align: center;
+            overflow: hidden;
+            display: block;
+            text-align: center;
+
+            h3{
+                font-family:'Brush Script MT';
+                font-size: xx-large;
+                text-align: center;
+            }
+
+            .container{
+                div{
+                    .image{
+                        width: 85%;
+                        margin:1.5%;
+                        border-radius:11rem;
+                    }
+                }
+                div{
+                    iframe{
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aside{
+        grid-area: aside;
+    }
+}

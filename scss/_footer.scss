@@ -1,0 +1,56 @@
+.footer{
+
+    grid-area: footer;
+
+    padding: 2%;
+    display: block;
+    text-align: center;
+
+    h2{}
+
+    .buttons{
+        min-width: auto;
+        display: flex;
+        justify-content: space-evenly;
+
+        a{
+            text-decoration: none;
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #314652;
+            color: #f1f1f1;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+            transition: all .4s ease-in-out;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .fot{
+        display: flex;
+        justify-content: center;
+
+        .arriba{
+            margin-top:7%;
+            width: 80px;
+            height: 70px;
+            margin-bottom: 3%;
+            color:#f1f1f1;
+            background-color: #314652;
+            border-radius: 23px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+            transition: all .4s ease-in-out;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+            align-items: center;
+        }
+    }
+}

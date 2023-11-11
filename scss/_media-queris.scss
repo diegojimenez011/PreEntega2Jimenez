@@ -1,0 +1,107 @@
+
+@media only screen and (max-width:300px) {
+    .parallax{
+        height: 250vh;
+        width: auto;
+    }
+}
+@media only screen and (max-width:480px) {
+    .parallax{
+        height: 200vh;
+        width: auto;
+    }
+    
+}
+@media only screen and (max-width:576px) {
+    .parallax{
+        height: 150vh;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:768px){ 
+
+    /* Imagen de fondo elegida */
+    #p1{    
+    background-image: url("../assets/img/header2-1.jpg");
+    }
+    #p2{
+        background-image: url("../assets/img/header13.jpg");
+    }
+    #p3{
+        background-image: url("../assets/img/header20.jpg");
+    }
+    #p4{
+        background-image: url("../assets/img/header15.jpg");
+    }
+    #p5{
+        background-image: url("../assets/img/header14.jpg");
+    }
+    .parallax{
+        height: 100vh;
+        width: auto;
+    }
+    
+}
+
+
+@media only screen and (min-width:768px){
+
+    /*------------------grids aplicado al main--------------*/
+    .grid{ 
+        display: grid;
+        grid-template-areas: 
+            "parallax parallax parallax"
+            "none section aside"
+            "none section aside";
+        grid-template-columns: 1fr 5fr 1.5fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 2.5%;
+    }
+    .parallax{
+        grid-area: parallax;
+    }
+    .section{
+        grid-area: section;
+    }
+    .aside{
+        grid-area: aside;
+    }
+
+    .exp{   /*--------------configuracion del carrusel-----------------*/
+        margin:5%;
+        display: flex;
+        flex-direction: row;
+        background-color: hsl(235, 76%, 83%);
+        border-radius: 7rem;
+        padding: 8%;
+        text-align: center;
+        justify-content: center;
+        overflow:inherit;
+    }
+    
+    
+    /* Imagen de fondo elegida */
+    #p1{
+        background-image: url("../assets/img/header2.jpg");
+    }
+    #p2{
+        background-image: url("../assets/img/header13.jpg");
+    }
+    #p3{
+        background-image: url("../assets/img/header14.jpg");
+    }
+    #p4{
+        background-image: url("../assets/img/header15.jpg");
+    }
+    #p5{
+        background-image: url("../assets/img/header21.jpg");
+    }
+
+
+    .cont-2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -10,7 +10,38 @@ body {
   font-family: "Josefin Sans";
   background-color: beige;
 }
-body header .parallax {
+@font-face {
+  font-family: "AnotherDay";
+  src: url("../assets/font/AnotherDay.ttf");
+}
+@font-face {
+  font-family: "Amstagram";
+  src: url("../assets/font/Amstagram.ttf");
+}
+body a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 2rem;
+}
+body li {
+  text-align: center; /*centrado de texto*/
+  margin-left: 2%;
+  display: inline-block;
+  width: auto;
+  position: relative;
+  font-size: 2rem;
+}
+body #grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+body #grid-container .header {
+  grid-area: header;
+}
+body #grid-container .header .parallax {
   height: 100vh;
   width: auto;
   /* Crear el efecto parallax al scrollear */
@@ -23,7 +54,7 @@ body header .parallax {
   margin-bottom: 50px;
   padding: 2%;
 }
-body header .parallax #cabecera {
+body #grid-container .header .parallax #cabecera {
   background-color: rgb(213, 255, 134) !important;
   padding: 1%;
   position: sticky;
@@ -31,21 +62,32 @@ body header .parallax #cabecera {
   border-radius: 2rem;
   margin: 20px;
 }
-body header .parallax #cabecera .container-fluid {
+body #grid-container .header .parallax #cabecera .container-fluid {
   display: flex !important;
   flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
 }
-body main div .section h1 {
+body #grid-container .main {
+  grid-area: main;
+}
+body #grid-container .main .grid {
+  display: grid;
+  grid-template-areas: "section" "section" "aside";
+  grid-template-rows: auto auto auto;
+}
+body #grid-container .main .grid .section {
+  grid-area: section;
+}
+body #grid-container .main .grid .section h1 {
   text-align: center;
 }
-body main div .section h2 {
+body #grid-container .main .grid .section h2 {
   font-family: "Brush Script MT";
   font-size: xx-large;
   text-align: center;
 }
-body main div .section .art {
+body #grid-container .main .grid .section .art {
   margin: 5%;
   background-color: bisque;
   border-radius: 8rem;
@@ -55,27 +97,27 @@ body main div .section .art {
   display: block;
   text-align: center;
 }
-body main div .section .art h3 {
+body #grid-container .main .grid .section .art h3 {
   font-family: "Brush Script MT";
   font-size: xx-large;
   text-align: center;
 }
-body main div .section .art .container {
+body #grid-container .main .grid .section .art .container {
   display: flex;
   flex-direction: column-reverse;
 }
-body main div .section .art .container div .image {
+body #grid-container .main .grid .section .art .container div .image {
   width: 85%;
   margin: 1.5%;
   border-radius: 11rem;
 }
-body main div .section .art .container .text {
+body #grid-container .main .grid .section .art .container .text {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-body main div .section div .carousel-inner div .exp {
+body #grid-container .main .grid .section div .carousel-inner div .exp {
   margin: 5%;
   background-color: hsl(235, 76%, 83%);
   border-radius: 7rem;
@@ -84,33 +126,36 @@ body main div .section div .carousel-inner div .exp {
   justify-content: center;
   overflow: inherit;
 }
-body main div .section div .carousel-inner div .exp #carr {
+body #grid-container .main .grid .section div .carousel-inner div .exp #carr {
   width: 45%;
   border-radius: 4rem;
 }
-body main div aside {
+body #grid-container .main .grid .aside {
+  grid-area: aside;
   display: flex;
   flex-direction: column;
   margin: 1%;
 }
-body main div aside .ass {
+body #grid-container .main .grid .aside .ass {
   padding-top: 12.5%;
   padding-right: 4%;
   border-radius: 3rem;
 }
-body main div aside .ass .ass1 {
+body #grid-container .main .grid .aside .ass .ass1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body main div aside .ass .ass1 li #lat-bar {
+body #grid-container .main .grid .aside .ass .ass1 li #lat-bar {
   font-size: small;
 }
-body main .presentacion {
-  text-align: center;
-  padding: 5%;
+body #grid-container .main {
+  grid-area: main;
 }
-body main .contacto {
+body #grid-container .main .section {
+  grid-area: section;
+}
+body #grid-container .main .section .contacto {
   margin: 5%;
   background-color: bisque;
   border-radius: 8rem;
@@ -120,19 +165,65 @@ body main .contacto {
   display: block;
   text-align: center;
 }
-body main section .art .container div iframe {
-  border-radius: 2rem;
-}
-body main .contacto textarea {
+body #grid-container .main .section .contacto textarea {
   resize: vertical;
   width: 66%;
 }
-body main .wrapper {
+body #grid-container .main .aside {
+  grid-area: aside;
+}
+body #grid-container .main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  flex-direction: inherit;
+}
+body #grid-container .main .section {
+  grid-area: section;
+  display: inline-flexbox;
+  justify-content: center;
+}
+body #grid-container .main .section h2 {
+  font-size: 50px;
+}
+body #grid-container .main .section .art {
+  margin: 5%;
+  background-color: bisque;
+  border-radius: 8rem;
+  padding: 7%;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+body #grid-container .main .section .art h3 {
+  font-family: "Brush Script MT";
+  font-size: xx-large;
+  text-align: center;
+}
+body #grid-container .main .section .art .container div .image {
+  width: 85%;
+  margin: 1.5%;
+  border-radius: 11rem;
+}
+body #grid-container .main .section .art .container div iframe {
+  border-radius: 2rem;
+}
+body #grid-container .main .aside {
+  grid-area: aside;
+}
+body #grid-container .main {
+  grid-area: main;
+}
+body #grid-container .main .section {
+  grid-area: section;
+}
+body #grid-container .main .section .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 80rem;
 }
-body main .wrapper .cols {
+body #grid-container .main .section .wrapper .cols {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,18 +236,18 @@ body main .wrapper .cols {
   -ms-flex-pack: center;
   justify-content: center;
 }
-body main .wrapper .cols .col {
+body #grid-container .main .section .wrapper .cols .col {
   width: 100%;
   margin: 1rem;
   cursor: pointer;
 }
-body main .wrapper .cols .col .container {
+body #grid-container .main .section .wrapper .cols .col .container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
-body main .wrapper .cols .col .container:hover .front {
+body #grid-container .main .section .wrapper .cols .col .container:hover .front {
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -167,7 +258,7 @@ body main .wrapper .cols .col .container:hover .front {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-body main .wrapper .cols .col .container:hover .back {
+body #grid-container .main .section .wrapper .cols .col .container:hover .back {
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -178,7 +269,7 @@ body main .wrapper .cols .col .container:hover .back {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-body main .wrapper .cols .col .container .front {
+body #grid-container .main .section .wrapper .cols .col .container .front {
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -201,7 +292,7 @@ body main .wrapper .cols .col .container .front {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-body main .wrapper .cols .col .container .front:after {
+body #grid-container .main .section .wrapper .cols .col .container .front:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,7 +307,7 @@ body main .wrapper .cols .col .container .front:after {
   backface-visibility: hidden;
   border-radius: 10px;
 }
-body main .wrapper .cols .col .container .front .inner {
+body #grid-container .main .section .wrapper .cols .col .container .front .inner {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -232,12 +323,12 @@ body main .wrapper .cols .col .container .front .inner {
   z-index: 2;
   justify-content: center;
 }
-body main .wrapper .cols .col .container .front .inner p {
+body #grid-container .main .section .wrapper .cols .col .container .front .inner p {
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
 }
-body main .wrapper .cols .col .container .front .inner p:after {
+body #grid-container .main .section .wrapper .cols .col .container .front .inner p:after {
   content: "";
   width: 4rem;
   height: 2px;
@@ -249,12 +340,12 @@ body main .wrapper .cols .col .container .front .inner p:after {
   margin: 0 auto;
   bottom: -0.75rem;
 }
-body main .wrapper .cols .col .container .front .inner span {
+body #grid-container .main .section .wrapper .cols .col .container .front .inner span {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Montserrat";
   font-weight: 300;
 }
-body main .wrapper .cols .col .container .back {
+body #grid-container .main .section .wrapper .cols .col .container .back {
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -285,7 +376,7 @@ body main .wrapper .cols .col .container .back {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-body main .wrapper .cols .col .container .back .inner {
+body #grid-container .main .section .wrapper .cols .col .container .back .inner {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -301,17 +392,32 @@ body main .wrapper .cols .col .container .back .inner {
   z-index: 2;
   justify-content: center;
 }
-body footer {
+body #grid-container .main .aside {
+  grid-area: aside;
+}
+body #grid-container .main {
+  grid-area: main;
+}
+body #grid-container .main .section {
+  grid-area: section;
+  text-align: center;
+  padding: 5%;
+}
+body #grid-container .main .aside {
+  grid-area: aside;
+}
+body #grid-container .footer {
+  grid-area: footer;
   padding: 2%;
   display: block;
   text-align: center;
 }
-body footer .buttons {
+body #grid-container .footer .buttons {
   min-width: auto;
   display: flex;
   justify-content: space-evenly;
 }
-body footer .buttons a {
+body #grid-container .footer .buttons a {
   text-decoration: none;
   font-size: 28px;
   width: 60px;
@@ -324,14 +430,14 @@ body footer .buttons a {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
 }
-body footer .buttons a:hover {
+body #grid-container .footer .buttons a:hover {
   transform: scale(1.2);
 }
-body footer .fot {
+body #grid-container .footer .fot {
   display: flex;
   justify-content: center;
 }
-body footer .fot .arriba {
+body #grid-container .footer .fot .arriba {
   margin-top: 7%;
   width: 80px;
   height: 70px;
@@ -346,6 +452,101 @@ body footer .fot .arriba {
   justify-content: center;
   font-size: larger;
   align-items: center;
+}
+@media only screen and (max-width: 300px) {
+  body #grid-container .parallax {
+    height: 250vh;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #grid-container .parallax {
+    height: 200vh;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body #grid-container .parallax {
+    height: 150vh;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body #grid-container {
+    /* Imagen de fondo elegida */
+  }
+  body #grid-container #p1 {
+    background-image: url("../assets/img/header2-1.jpg");
+  }
+  body #grid-container #p2 {
+    background-image: url("../assets/img/header13.jpg");
+  }
+  body #grid-container #p3 {
+    background-image: url("../assets/img/header20.jpg");
+  }
+  body #grid-container #p4 {
+    background-image: url("../assets/img/header15.jpg");
+  }
+  body #grid-container #p5 {
+    background-image: url("../assets/img/header14.jpg");
+  }
+  body #grid-container .parallax {
+    height: 100vh;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body #grid-container {
+    /*------------------grids aplicado al main--------------*/
+    /* Imagen de fondo elegida */
+  }
+  body #grid-container .grid {
+    display: grid;
+    grid-template-areas: "parallax parallax parallax" "none section aside" "none section aside";
+    grid-template-columns: 1fr 5fr 1.5fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 2.5%;
+  }
+  body #grid-container .parallax {
+    grid-area: parallax;
+  }
+  body #grid-container .section {
+    grid-area: section;
+  }
+  body #grid-container .aside {
+    grid-area: aside;
+  }
+  body #grid-container .exp { /*--------------configuracion del carrusel-----------------*/
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(235, 76%, 83%);
+    border-radius: 7rem;
+    padding: 8%;
+    text-align: center;
+    justify-content: center;
+    overflow: inherit;
+  }
+  body #grid-container #p1 {
+    background-image: url("../assets/img/header2.jpg");
+  }
+  body #grid-container #p2 {
+    background-image: url("../assets/img/header13.jpg");
+  }
+  body #grid-container #p3 {
+    background-image: url("../assets/img/header14.jpg");
+  }
+  body #grid-container #p4 {
+    background-image: url("../assets/img/header15.jpg");
+  }
+  body #grid-container #p5 {
+    background-image: url("../assets/img/header21.jpg");
+  }
+  body #grid-container .cont-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

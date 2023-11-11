@@ -1,0 +1,125 @@
+.main{
+    grid-area: main;
+
+    .grid{ //grid correspondiente al main del index
+        
+        display: grid;
+        grid-template-areas:
+            "section"
+            "section"
+            "aside";
+        grid-template-rows: auto auto auto;
+
+        //estilos del index---pagina principal//
+
+            .section{
+                grid-area: section;
+
+                h1{
+                    text-align: center;
+                }
+                h2{
+                    font-family:'Brush Script MT';
+                    font-size: xx-large;
+                    text-align: center;
+                }
+                .art{
+                    margin:5%;
+                    background-color: bisque;
+                    border-radius: 8rem;
+                    padding: 7%;
+                    text-align: center;
+                    overflow: hidden;
+                    display: block;
+                    text-align: center;
+
+                    h3{
+                        font-family:'Brush Script MT';
+                        font-size: xx-large;
+                        text-align: center;
+                    }
+
+                    .container{
+                        display: flex;
+                        flex-direction: column-reverse;
+
+                        div{
+                            .image{
+                                width: 85%;
+                                margin:1.5%;
+                                border-radius:11rem;
+                            }
+                        }
+                                        
+                        .text{
+                            display: flex;
+                            text-align: center;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                    }
+                }
+                
+
+                //estilos del carrusel//
+                div{
+                    .carousel-inner{
+
+                        div{
+                            .exp{
+
+                                margin:5%;
+                                background-color: hsl(235, 76%, 83%);
+                                border-radius: 7rem;
+                                padding: 8%;
+                                text-align: center;
+                                justify-content: center;
+                                overflow:inherit;
+
+
+                                #carr{
+                                    width: 45%;
+                                    border-radius: 4rem;
+                                }
+                                .cont-2{}
+                                p{}
+                            }
+                        }
+
+                        div{
+
+                        }
+                    }
+                }
+            }
+
+            .aside{
+                grid-area: aside;
+                display: flex;
+                flex-direction: column;
+                margin:1%;
+
+                .ass{
+                    padding-top:12.5%;
+                    padding-right:4%;
+                    border-radius: 3rem;
+
+                    h2{}
+
+                    .ass1{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
+
+                        li{
+                            #lat-bar{
+                                font-size: small;
+                            }
+                        }
+                    }
+                }
+            }
+
+    }
+}

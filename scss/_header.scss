@@ -1,0 +1,38 @@
+.header{
+    
+    grid-area: header;
+
+    .parallax{
+        height: 100vh;
+        width: auto;
+        
+        /* Crear el efecto parallax al scrollear */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* box modeling */
+        padding: 50px 30px;
+        margin-bottom: 50px;
+        padding: 2%;
+
+        #cabecera{
+            background-color: rgb(213, 255, 134)!important;
+            padding: 1%;
+            position: sticky;
+            top: 20px;
+            border-radius: 2rem;
+            margin: 20px;
+
+            .container-fluid{
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+        }
+
+    }
+}
